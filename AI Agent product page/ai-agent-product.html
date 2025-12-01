@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agent Product</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="navbar-style.css">
+</head>
+<body>
+
+<!-- ==================================================================== -->
+    <!-- START OF HEADER HTML -->
+    <!-- ==================================================================== -->
+    <header class="navbar">
+      <div class="nav-container">
+
+        <div class="logo-container d-flex align-items-center">
+          <img src="assets/logo.png" alt="Logo" class="logo-img">
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav id="navMenu" class="d-lg-flex align-items-center gap-3 position-relative">
+          <a href="#" class="custom-nav">Home</a>
+          <a href="#" class="custom-nav">About Us</a>
+          <a href="#" class="custom-nav">Contact Us</a>
+
+          <!-- Platform Dropdown -->
+          <a href="#" class="custom-nav" id="platformToggle" aria-haspopup="true" aria-expanded="false">Platform</a>
+          <ul class="dropdown-menu" id="platformMenu" role="menu" aria-labelledby="platformToggle">
+            <li><a role="menuitem" href="#">AI Workforce</a></li>
+            <li><a role="menuitem" href="#">MarketPlace</a></li>
+            <li><a role="menuitem" href="#">Automations</a></li>
+            <li><a role="menuitem" href="#">Project Management</a></li>
+            <li><a role="menuitem" href="#">Payments</a></li>
+          </ul>
+
+          <a href="#" class="custom-nav">Solutions</a>
+          <a href="#" class="custom-nav">Products</a>
+        </nav>
+
+        <div class="nav-auth d-lg-flex align-items-center gap-2">
+          <a href="#"><button class="auth-btn">Log In</button></a>
+          <a href="#"><button class="auth-btn">Sign Up</button></a>
+        </div>
+
+        <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">☰</button>
+
+      </div>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="mobileMenu">
+      <div class="offcanvas-header">
+        <h5>Menu</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="d-flex flex-column gap-3">
+          <a href="#" class="mobile-nav" data-bs-dismiss="offcanvas">Home</a>
+          <a href="#" class="mobile-nav" data-bs-dismiss="offcanvas">About Us</a>
+          <a href="#" class="mobile-nav" data-bs-dismiss="offcanvas">Contact Us</a>
+
+          <!-- Platform Dropdown (Mobile) -->
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-target="#platformMobile">Platform ▸</a>
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-target="#solutionsMobile">Solutions ▸</a>
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-target="#productsMobile">
+            Products ▸</a>
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" data-bs-target="#benefitsMobile">Benefits ▸</a>
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" data-bs-target="#companyMobile">Company ▸</a>
+          <a class="mobile-nav" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" data-bs-target="#hotnichesMobile">Hot Niches ▸</a>
+
+        </nav>
+      </div>
+    </div>
+
+    <!-- Right side sub-offcanvas for platform mobile dropdown -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="platformMobile">
+      <div class="offcanvas-header">
+        <h5>Platform</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">AI Workforce</a>
+        <a class="mobile-nav" href="#">Marketplace</a>
+        <a class="mobile-nav" href="#">Automations</a>
+        <a class="mobile-nav" href="#">Project Management</a>
+        <a class="mobile-nav" href="#">Payments</a>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="solutionsMobile">
+      <div class="offcanvas-header">
+        <h5>Solutions</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">Web Agency</a>
+        <a class="mobile-nav" href="#">Digital Agency Startup</a>
+        <a class="mobile-nav" href="#">SaaS</a>
+        <a class="mobile-nav" href="#">Social Media Agency</a>
+        <a class="mobile-nav" href="#">Marketing</a>
+        <a class="mobile-nav" href="#">Creative Agencies</a>
+        <a class="mobile-nav" href="#">Software vendor</a>
+        <a class="mobile-nav" href="#">Sales</a>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="productsMobile">
+      <div class="offcanvas-header">
+        <h5>Products</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">AI WebChat</a>
+        <a class="mobile-nav" href="#">CRM</a>
+      
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="benefitsMobile">
+      <div class="offcanvas-header">
+        <h5>Benefits</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">Review Management</a>
+        <a class="mobile-nav" href="#">Phone and Calling</a>
+        <a class="mobile-nav" href="#">AI Workforce</a>
+        <a class="mobile-nav" href="#">MarketPlace</a>
+        <a class="mobile-nav" href="#">Automations</a>
+        <a class="mobile-nav" href="#">Project Management</a>
+        <a class="mobile-nav" href="#">Payments</a>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="companyMobile">
+      <div class="offcanvas-header">
+        <h5>Company</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">About Us</a>
+        <a class="mobile-nav" href="#">Contact Us</a>
+        <a class="mobile-nav" href="#">FAQs</a>
+        <a class="mobile-nav" href="#">Pricing</a>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="hotnichesMobile">
+      <div class="offcanvas-header">
+        <h5>Hot Niches</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-2">
+        <a class="mobile-nav" href="#">Home Services</a>
+        <a class="mobile-nav" href="#">Real Estate</a>
+        <a class="mobile-nav" href="#">Finance</a>
+        <a class="mobile-nav" href="#">Automotive</a>
+        <a class="mobile-nav" href="#">Legal</a>
+        <a class="mobile-nav" href="#">Medical</a>
+        <a class="mobile-nav" href="#">Nonprofit Fundraising</a>
+        <a class="mobile-nav" href="#">SaaS, Agencies</a>
+      </div>
+    </div>
+    <div class="mb-5"></div>
+    <!-- ==================================================================== -->
+    <!-- END OF HEADER HTML -->
+    <!-- ==================================================================== -->
+
+<!-- ==============================
+     HERO SECTION
+============================== -->
+<section class="ai-hero py-5 pt-5">
+  <div class="container">
+    <div class="mb-2">
+      <span style="color:#FFFFFF; font-size:20px; font-weight:500;">DaitchPro</span>
+      <span style="color:#00D8BD; font-size:20px; font-weight:500;">/AI Agent Product</span>
+    </div>
+
+    <h1 class="display-4 fw-bold text-white">AI Agent Product</h1>
+  </div>
+</section>
+<!-- ==============================
+     FUTURE OF SALES SECTION
+============================== -->
+<section class="future-sales py-5">
+  <div class="container">
+    <div class="future-card mx-auto text-center p-5">
+      <h2 class="fw-bold text-white mb-3" style="font-size:2rem;">
+        The Future of Sales is Here. Meet<br>
+        the DaitchPro <span style="color:#00D8BD;">AI Voice Agent.</span>
+      </h2>
+      <p class="mb-4" style="max-width:700px; margin:auto; font-size:1rem;">
+        Automate complex sales cycles, qualify leads instantly, and close deals
+        faster than ever before. This is human-level conversation, scaled infinitely.
+      </p>
+      <a href="#" class="btn btn-ai">See All Pricing Models</a>
+    </div>
+  </div>
+</section>
+<!-- ==============================
+     ENGINE OF SCALE SECTION
+============================== -->
+<section class="engine-scale py-5">
+  <div class="container">
+    <div class="engine-card mx-auto text-center p-5">
+      <h2 class="fw-bold text-white mb-3" style="font-size:2rem;">
+        The Engine of Scale: Why Our AI 
+        <span style="color:#00D8BD;">Outperforms</span>
+      </h2>
+      <p class="mb-5" style="max-width:800px; margin:auto; font-size:1rem;">
+        Our proprietary engine goes beyond simple chatbots. It’s built for true human-level
+        intelligence, speed, and seamless integration with your DaitchPro CRM.
+      </p>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="engine-feature">
+            <div class="engine-icon mb-3">
+              <img src="assets/ai-agent-icons/mingcute_mic-ai-fill.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h4 class="feature-heading">Human-Level Conversation</h5>
+            <p class="feature-text">
+              Seamless, non-robotic experience guaranteed. The AI understands context, tone, and
+              complex objections just like your best sales rep.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="engine-feature">
+            <div class="engine-icon mb-3">
+            <img src="assets/ai-agent-icons/mdi_lightning-bolt.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h4 class="feature-heading">Instant & Accurate Qualification</h4>
+             <p class="feature-text">
+              AI instantly processes and qualifies leads based on your custom criteria. It routes
+              only the hottest prospects to your human team for final closing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="engine-feature">
+            <div class="engine-icon mb-3">
+              <img src="assets/ai-agent-icons/fa-solid_sync.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h4 class="feature-heading">Seamless DaitchPro Sync</h5>
+            <p class="feature-text">
+              Every call log, data point, and sales note is automatically synced back into your
+              DaitchPro CRM. Zero data entry is required, maintaining a clean data flow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==============================
+     IMPACT SECTION
+============================== -->
+<section class="impact-section py-5">
+  <div class="container">
+
+    <div class="impact-card mx-auto p-5">
+
+      <h2 class="fw-bold text-white text-center mb-3" style="font-size:2.2rem;">
+        From Burnout to Breakthrough:<br>
+        The DaitchPro <span style="color:#00D8BD;">Impact</span>
+      </h2>
+
+      <p class="mb-5 text-center" style="max-width:750px; margin:auto; font-size:1rem;">
+        See how automating your sales process tackles the highest costs and biggest
+        inefficiencies currently plaguing your human sales team.
+      </p>
+
+      <!-- ==== TABLE ==== -->
+      <div class="row impact-table g-0 h-100">
+
+        <!-- LEFT SIDE -->
+        <div class="col-md-6 impact-left d-flex flex-column">
+          <h5 class="text-white mb-4 fw-semibold">Problem (Pain Point)</h5>
+
+          <!-- Item 1 -->
+          <div class="impact-item flex-grow-1">
+            <div class="d-flex align-items-start">
+              <i class="fa-solid fa-xmark text-danger me-2"></i>
+              <strong class="text-white">High Cost & Training Time:</strong>
+            </div>
+            <p>
+              Human staff ki high hiring cost aur lambi training cycle.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="impact-item flex-grow-1">
+            <div class="d-flex align-items-start">
+              <i class="fa-solid fa-xmark text-danger me-2"></i>
+              <strong class="text-white">Inconsistent Follow-up:</strong>
+            </div>
+            <p>
+              Sales reps ka burnout aur missed opportunities.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-md-6 impact-right d-flex flex-column">
+          <h5 class="text-white mb-4 fw-semibold">Solution (DaitchPro AI Agent)</h5>
+
+          <!-- Item 1 -->
+          <div class="impact-item flex-grow-1">
+            <div class="d-flex align-items-start">
+              <i class="fa-solid fa-check text-success me-2"></i>
+              <strong class="text-white">Instant Deployment & Low Cost:</strong>
+            </div>
+            <p>
+              Deploy instantly trainable AI that handles 80% of routine calls for a fraction of the cost.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="impact-item flex-grow-1">
+            <div class="d-flex align-items-start">
+              <i class="fa-solid fa-check text-success me-2"></i>
+              <strong class="text-white">24/7 Global Coverage:</strong>
+            </div>
+            <p>
+              Guaranteed follow-up on every lead, 24/7. Never miss a hot prospect again.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ==============================
+     BEYOND THE CALL SECTION
+============================== -->
+<section class="beyond-call-section py-5">
+  <div class="container">
+
+    <div class="beyond-card mx-auto p-5">
+
+      <h2 class="fw-bold text-white mb-2 text-center" style="font-size:2.2rem;">
+        Beyond the Call: AI Across Every
+      </h2>
+      <h2 class="fw-bold text-center" style="color:#00D8BD; font-size:2.2rem; margin-top:-10px;">
+        Channel
+      </h2>
+
+      <p class="text-center mb-5" style="max-width:760px; margin:auto; font-size:1rem;">
+        The DaitchPro AI Agent is designed to be a unified intelligence. It learns from all 
+        customer touchpoints—from your website chat widget to email—to optimize every sales call.
+      </p>
+
+      <div class="row g-4 mt-4">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="beyond-feature h-100">
+            <div class="beyond-icon mb-3">
+              <img src="assets/ai-agent-icons/clarity_chat-bubble-solid.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Data From Chat Widgets</h5>
+            <p class="beyond-text">
+              AI call scripts are dynamically informed by recent interactions captured via your 
+              website chat widget, ensuring context continuity in the sales call.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="beyond-feature h-100">
+            <div class="beyond-icon mb-3">
+              <img src="assets/ai-agent-icons/ic_baseline-email.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Email Intent Analysis</h5>
+            <p class="beyond-text">
+              The agent analyzes customer email correspondence (via Datchpro mail sync) to understand purchase intent 
+              and emotional tone before making a follow-up call.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="beyond-feature h-100">
+            <div class="beyond-icon mb-3">
+              <img src="assets/ai-agent-icons/fa-solid_sync-1.svg" class="feature-icon" alt="Feature Icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Sales Process Consistency</h5>
+            <p class="beyond-text">
+              By referencing data from all channels, the AI ensures a consistent brand voice 
+              and sales pitch, regardless of where the customer started their journey.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==============================
+     SECURITY & COMPLIANCE SECTION
+============================== -->
+<section class="security-section py-5">
+  <div class="container">
+
+    <div class="security-card mx-auto p-5">
+
+      <h2 class="fw-bold text-center text-white mb-2" style="font-size:2.4rem;">
+        Enterprise-Grade Security &
+      </h2>
+      <h2 class="fw-bold text-center" style="color:#00D8BD; font-size:2.4rem; margin-top:-10px;">
+        Compliance
+      </h2>
+
+      <p class="text-center mt-3 mb-5" style="max-width:750px; margin:auto; font-size:1rem;">
+        Deploy the DaitchPro AI Agent with full confidence. Our platform is built to 
+        adhere to global privacy standards and guarantee maximum data security.
+      </p>
+
+      <div class="row g-4 mt-4">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="security-feature h-100">
+            <div class="security-icon mb-3">
+              <img src="assets/ai-agent-icons/fluent_globe-clock-20-filled.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2 text-center">Global Data Privacy</h5>
+            <p class="security-text">
+              Full adherence to international data privacy laws (e.g., GDPR, CCPA). 
+              Your client data is always protected and handled with compliance assured.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="security-feature h-100">
+            <div class="security-icon mb-3">
+              <img src="assets/ai-agent-icons/tdesign_secured-filled.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2 text-center">Secure Infrastructure</h5>
+            <p class="security-text">
+              Calls and data are processed through encrypted, high-availability servers, 
+              ensuring zero data leakage and 99.9% uptime for continuous operation.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="security-feature h-100">
+            <div class="security-icon mb-3">
+              <img src="assets/ai-agent-icons/healthicons_justice-24px.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2 text-center">AI Ethical Guidelines</h5>
+            <p class="security-text">
+              The AI operates under strict ethical guidelines, preventing aggressive sales 
+              tactics and ensuring transparent communication with customers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==============================
+     INTEGRATION ENGINE SECTION
+============================== -->
+<section class="integration-section py-5">
+  <div class="container">
+
+    <div class="integration-card mx-auto p-5">
+
+      <h2 class="fw-bold text-center text-white mb-2" style="font-size:2.4rem;">
+        Seamless Integration with Your
+      </h2>
+      <h2 class="fw-bold text-center" style="color:#00D8BD; font-size:2.4rem; margin-top:-10px;">
+        Automation Engine
+      </h2>
+
+      <p class="text-center mt-3 mb-5" style="max-width:760px; margin:auto; font-size:1rem;">
+        The DaitchPro AI Agent doesn't just call; it learns, updates, and triggers 
+        action across your entire DaitchPro platform.
+      </p>
+
+      <div class="row g-4 mt-4">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="integration-feature h-100 text-center">
+            <div class="integration-icon mb-3">
+              <img src="assets/ai-agent-icons/mdi_workflow.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Automated Lead Nurturing</h5>
+            <p class="integration-text">
+              Once the AI qualifies a lead, it instantly triggers the next step in the 
+              DaitchPro workflow, such as sending a personalized follow-up email or SMS.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="integration-feature h-100 text-center">
+            <div class="integration-icon mb-3">
+              <img src="assets/ai-agent-icons/vector.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Billing & Invoicing Sync</h5>
+            <p class="integration-text">
+              AI-generated sales data is instantly available to your DaitchPro Billing module, 
+              simplifying commission calculations and invoicing cycles.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="integration-feature h-100 text-center">
+            <div class="integration-icon mb-3">
+              <img src="assets/ai-agent-icons/mingcute_notification-fill.svg" class="feature-icon" alt="icon">
+            </div>
+            <h5 class="text-white fw-semibold mb-2">Live Team Alerts</h5>
+            <p class="integration-text">
+              High-value sales opportunities are instantly flagged and pushed to the 
+              relevant human sales rep for immediate takeover.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==============================
+     HERO SECTION
+============================== -->
+<section class="hero-section">
+  <div class="container">
+
+    <h1 class="hero-title">
+      Grow Smarter and Earn More<br>
+      with <span class="accent">DaitchPro</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Step into the future of automation with DaitchPro.
+    </p>
+
+    <p class="hero-description">
+      Experience an intelligent all-in-one platform designed to streamline your
+      workflows, boost sales, and scale your business effortlessly.
+      Connect with our team or start your free trial today — and see how AI can
+      transform the way you work.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary-hero">See All Pricing Models</a>
+      <a href="#" class="btn-outline-hero">Book a Demo</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="mb-5"></div>
+    <!-- ==================================================================== -->
+    <!-- START OF FOOTER HTML -->
+    <!-- ==================================================================== -->
+    <footer class="pt-5 pb-4">
+      <div class="container-footer">
+        <div class="row desktop-footer">
+          <div class="col-md-2 mb-4">
+            <!-- Image is now embedded using Base64 encoding for a self-contained file. -->
+            <img src="assets/logo.png" class="img-fluid mb-3" alt="DaitchPro Logo">
+        </div>
+
+          <div class="col-md-2 footer-col mb-3">
+            <h6 class="footer-title">Solutions</h6>
+            <ul class="list-unstyled">
+              <li>Web Agency</li>
+              <li>Digital Agency StartUps</li>
+              <li>SAAS</li>
+              <li>Social Media Agency</li>
+              <li>Marketing</li>
+              <li>Creative Agencies</li>
+              <li>Software Vendor</li>
+              <li>Sales</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 footer-col mb-3">
+            <h6 class="footer-title">Platform</h6>
+            <ul class="list-unstyled">
+              <li>AI Workforce</li>
+              <li>Marketplace</li>
+              <li>Automations</li>
+              <li>Project Management</li>
+              <li>Payments</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 footer-col mb-3">
+            <h6 class="footer-title">Areas we handle</h6>
+            <ul class="list-unstyled">
+              <li>Primary Care</li>
+              <li>Dental Practices</li>
+              <li>Salons</li>
+              <li>Home Services</li>
+              <li>Restaurants</li>
+              <li>Automotive Dealerships</li>
+              <li>Real Estate</li>
+              <li>Veterinary Clinics</li>
+              <li>Professional Services</li>
+              <li>Retail & E-commerce</li>
+              <li>Financial Services</li>
+              <li>Education & Tutoring</li>
+              <li>Mental Health</li>
+              <li>Gyms, Fitness Studios</li>
+              <li>Senior Care</li>
+              <li>Landscaping</li>
+              <li>Events & Venue</li>
+              <li>Logistics</li>
+              <li>Nonprofit Fundraising</li>
+              <li>SaaS, Agencies</li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 footer-col mb-3">
+            <h6 class="footer-title">Company</h6>
+            <ul class="list-unstyled">
+              <a class="text-decoration-none" href="#"><li>About Us</li></a>
+             <a class="text-decoration-none" href="#"> <li>Contact Us</li></a>
+              <li>FAQs</li>
+              <li>Pricing</li>
+            </ul>
+          </div>
+           <div class="col-md-2 footer-col mb-3">
+                    <h6 class="footer-title">Benefits</h6>
+                    <ul class="list-unstyled">
+                     <li>Review Management</li>
+                      <li>Phone and Calling</li>
+                    </ul>
+                     <div class="col-md-2 footer-col ">
+                    <h6 class="footer-title">Products</h6>
+                    <ul class="list-unstyled">
+                      <li>AI WebChat</li>
+                      <li>CRM</li>
+                    </ul>
+                     </div>
+                        <div class="col-md-2 footer-col ">
+                            <h6 class="footer-title" style="white-space: nowrap;">AI Agent</h6>
+                        <ul class="list-unstyled">
+                          <li style="white-space: nowrap;">AI agent Demo</li>
+                          <li style="white-space: nowrap;">AI agent Product</li>
+                          <li style="white-space: nowrap;">AI agent Product Pricing</li>
+                        </ul>
+                        
+                    </div>
+             <div class="col-md-12 text-white text-start mt-5">
+                <p class="email me-5 mb-0"><strong>Email</strong></p>
+                <p>Info@DaitchPro.com</p>
+                <p class="mb-0"><strong>Phone Number</strong></p>
+                <p>+1 (309) 230-950</p>
+              </div>
+            </div>
+            
+              </div>
+             
+            </div>
+             <div class="mobile-only text-center">
+              <img src="logo.png" class="img-fluid mb-3" alt="DaitchPro Logo">
+            </div>
+            <div class="newsletter text-start ms-5">
+              <h6>Subscribe To our Newsletter</h6>
+              <div class="d-flex text-start mt-4">
+                <input type="email" class="me-2 p-2" placeholder="Your Email">
+                <button class="btn px-4">Get Started</button>
+              </div>
+            </div>
+            <div class="mobile-only text-center text-white">
+              <p class="mb-1"><strong>Email:</strong> Info@DaitchPro.com</p>
+              <p><strong>Phone:</strong> +1 (309) 230‑950</p>
+            </div>
+
+            <div class="text-center text-secondary mt-5">
+              © 2024 Copyright — DaitchPro| Designed by DaitchPro Team | All Rights Reserved | Powered by AI Automation
+        </div>
+         <div class="mobile-only text-center mt-3">
+            <i class="fa-brands fa-facebook fa-2x me-3" style="color:#1877F2;"></i>
+            <i class="fa-brands fa-twitter fa-2x me-3" style="color:#1DA1F2;"></i>
+            <i class="fa-brands fa-square-instagram fa-2x" style="color:#E4405F;"></i>
+          </div>
+        </div>
+    </footer>
+    <!-- ==================================================================== -->
+    <!-- END OF FOOTER HTML -->
+    <!-- ==================================================================== -->
+
+    <!-- External JS dependency from original file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        /* --- START OF EXTRACTED JAVASCRIPT --- */
+        
+        // The original file had multiple dropdown functions. I've included the logic for the main dropdowns.
+        
+        (function(){
+          const toggle=document.getElementById('platformToggle');
+          const menu=document.getElementById('platformMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+
+        (function(){
+          const toggle=document.getElementById('solutionsToggle');
+          const menu=document.getElementById('solutionsMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+
+        (function(){
+          const toggle=document.getElementById('productsToggle');
+          const menu=document.getElementById('productsMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+
+        (function(){
+          const toggle=document.getElementById('benefitsToggle');
+          const menu=document.getElementById('benefitsMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+
+        (function(){
+          const toggle=document.getElementById('companyToggle');
+          const menu=document.getElementById('companyMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+
+        (function(){
+          const toggle=document.getElementById('hotnichesToggle');
+          const menu=document.getElementById('hotnichesMenu');
+
+          function openMenu(){menu.classList.add('show');toggle.setAttribute('aria-expanded','true');}
+          function closeMenu(){menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}
+
+          toggle.addEventListener('click',e=>{e.preventDefault();menu.classList.contains('show')?closeMenu():openMenu();});
+
+          document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))closeMenu();});
+        })();
+        
+        /* --- END OF EXTRACTED JAVASCRIPT --- */
+    </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

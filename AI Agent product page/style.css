@@ -1,0 +1,416 @@
+    /* =============== Base Styles =============== */
+    body {
+  background-image: url("assets/Grid.png");
+  color: #fff;
+}
+
+    section {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2px);
+    }
+
+    /* =============== Hero Section =============== */
+    .ai-hero {
+      position: relative;
+      padding-top: 90px;
+      margin-top: 90px;
+      padding-bottom: 70px;
+      background: rgba(0, 30, 20, 0.55);
+    }
+
+    .ai-hero::before,
+    .ai-hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 216, 189, 0.35);
+    }
+
+    .ai-hero::before {
+      top: 0;
+    }
+
+    .ai-hero::after {
+      bottom: 0;
+    }
+
+/* ==============================
+   FUTURE SALES SECTION
+============================== */
+.future-sales {
+  padding: 100px 0;
+}
+
+.future-card {
+  background: rgba(0, 118, 102, 0.12);
+      border-radius: 18px;
+      padding: 35px 25px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 25px rgba(0, 216, 189, 0.08);
+      border: 0.25px solid #D3D3D3;
+      transition: 0.25s;
+    }
+
+    .future-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 28px rgba(0, 216, 189, 0.2);
+    }
+
+/* Button style */
+.btn-ai {
+  background: linear-gradient(to bottom, #007666, #083D1F);
+  border: 1px solid #33B0A0;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 30px;
+  transition: 0.3s;
+}
+
+.btn-ai:hover {
+  background: linear-gradient(to bottom, #083D1F, #007666);
+  border-color: #083D1F;
+}
+/* ==============================
+   ENGINE SCALE SECTION
+============================== */
+.engine-scale {
+  padding: 100px 0;
+}
+
+.engine-card {
+  background: rgba(0, 20, 15, 0.85);
+  border: 3px solid #00D8BD;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  max-width: 1100px;
+  padding: 60px 40px;
+}
+
+/* Feature Boxes */
+.engine-feature {
+  background: rgba(40, 40, 40, 0.25);
+  border: 1px solid rgba(0, 216, 189, 0.18);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+    height: 100%;
+}
+
+
+.feature-icon {
+  width: 48px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.feature-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #D3D3D3;
+  line-height: 1.55;
+}
+
+
+/* ==============================
+   IMPACT SECTION
+============================== */
+.impact-section {
+  padding: 100px 0;
+}
+
+.impact-card {
+  background: rgba(0, 20, 15, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  padding: 60px 45px;
+  max-width: 1100px;
+}
+/* ==============================
+   IMPACT TABLE – MATCH IMAGE EXACTLY
+============================== */
+
+.impact-table {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+  max-width: 680px;   /* adjust to any size */
+  margin: 0 auto;     /* keep table centered */
+}
+
+
+/* Left / Right column */
+.impact-left,
+.impact-right {
+  background: rgba(20, 20, 20, 0.35);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Add bottom border to item rows */
+.impact-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px 20px;
+  margin-bottom: 18px;
+}
+
+/* Remove border from last item of each column */
+.impact-left .impact-item:last-child,
+.impact-right .impact-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Header bottom border */
+.impact-left h5,
+.impact-right h5 {
+  padding: 20px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 15px
+}
+
+/* Icon + title in one row */
+.impact-item strong {
+  font-size: 1.05rem;
+}
+
+/* Description text */
+.impact-item p {
+  color: #d3d3d3;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  line-height: 1.55;
+}
+
+/* Icon sizing */
+.impact-item span {
+  font-size: 1.4rem !important;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Increase size of tick & cross icons in the Impact Table */
+.impact-item i {
+  font-size: 1.8rem;   /* increase or reduce as needed */
+  min-width: 28px;     /* keeps alignment consistent */
+}
+
+/* ==============================
+   BEYOND THE CALL SECTION
+============================== */
+
+.beyond-call-section {
+  padding: 100px 0;
+}
+
+.beyond-card {
+  background: rgba(0, 20, 15, 0.85);
+  border: 3px solid #00D8BD;
+  border-radius: 14px;
+  padding: 60px 45px;
+  max-width: 1150px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 216, 189, 0.15);
+}
+
+/* Feature Cards */
+.beyond-feature {
+  background: rgba(40, 40, 40, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: 0.25s;
+}
+
+
+/* Icons */
+.beyond-icon i {
+  font-size: 2.1rem;
+  color: #00D8BD;
+}
+
+/* Text */
+.beyond-text {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ==============================
+   SECURITY SECTION
+============================== */
+
+.security-section {
+  padding: 100px 0;
+}
+
+.security-card {
+  background: rgba(0, 20, 15, 0.85);
+  border: 3px solid #00D8BD;
+  border-radius: 14px;
+  padding: 60px 45px;
+  max-width: 1150px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 216, 189, 0.15);
+}
+
+/* Feature Cards */
+.security-feature {
+  background: rgba(40, 40, 40, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: 0.25s;
+  height: 100%;
+}
+
+/* Icons */
+.security-icon img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.security-text {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ==============================
+   INTEGRATION SECTION
+============================== */
+
+.integration-section {
+  padding: 100px 0;
+}
+
+.integration-card {
+  background: rgba(0, 20, 15, 0.85);
+  border: 3px solid #00D8BD;
+  border-radius: 14px;
+  padding: 60px 45px;
+  max-width: 1200px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 216, 189, 0.18);
+}
+
+/* Feature Cards */
+.integration-feature {
+  background: rgba(40, 40, 40, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: 0.25s;
+  height: 100%;
+}
+
+/* Icon */
+.integration-icon img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.integration-text {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+    /* ==============================
+   HERO SECTION STYLES
+============================== */
+.hero-section {
+  background: rgba(0, 30, 20, 0.55);
+  padding-top: 110px;
+  padding-bottom: 110px;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(0, 216, 189, 0.35);
+  border-bottom: 1px solid rgba(0, 216, 189, 0.35);
+}
+
+.hero-title {
+  color: #FFFFFF;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.accent {
+  color: #00D8BD;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #D3D3D3;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+.btn-primary-hero {
+  background: linear-gradient(to bottom, #007666, #083D1F);
+  padding: 12px 34px;
+  border-radius: 12px;
+  color: #FFFFFF;
+  border: 1px solid #33B0A0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary-hero:hover {
+  background: linear-gradient(to bottom, #083D1F, #007666);
+  border-color: #083D1F;
+}
+
+/* Outline Button */
+.btn-outline-hero {
+  padding: 12px 34px;
+  border-radius: 12px;
+  color: #ffffff;
+  border: 2px solid #00D8BD;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline-hero:hover {
+  background: rgba(0, 216, 189, 0.15);
+}
+
+
